@@ -1,0 +1,11 @@
+services:
+  dvla-ai:
+    build: .
+    # Override on the server for GHCR, e.g. DVLA_IMAGE=ghcr.io/org/dvla-ai-assistant:latest in .env
+    image: ${DVLA_IMAGE:-dvla-ai-assistant:latest}
+    ports:
+      - "8501:8501"
+    env_file: .env
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
