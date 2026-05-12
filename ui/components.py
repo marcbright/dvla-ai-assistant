@@ -133,7 +133,7 @@ def render_footer() -> None:
     st.markdown(
         """
 <div class="dvla-footer">
-  Powered by Claude AI | DVLA Ghana AI Assistant | Not official DVLA output
+  Powered by Bright Osei Kesse | DVLA Ghana AI Assistant | Not official DVLA output
 </div>
         """,
         unsafe_allow_html=True,
